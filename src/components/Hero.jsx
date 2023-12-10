@@ -92,7 +92,7 @@ console.log(showHand);
       <p className='break-words text-center  lg:text-4xl text-sm flex items-center justify-center'>My passion for web development knows no bounds.</p>
       <Link to={"/contact"} className='hover:text-text-2 underline cursor-pointer flex justify-center'>Let's chat.</Link>
     </div>  
-<div className=' flex justify-center overflow-hidden'>
+<div className='my-10 flex justify-center overflow-hidden'>
         <Lottie
         style={{width:200, height: 200 }}
         animationData={SmoothManFace}/>

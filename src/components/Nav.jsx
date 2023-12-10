@@ -31,12 +31,21 @@ const Nav = () => {
         className=' lg:gap-8 gap-4 z-20 flex items-center justify-between'>
           <div
           >
-             <Link 
+            {width > breakpoint?   <Link 
               onClick={()=>{setShown(false)}}
              to={"/"} className=' resize-none hover:text-text-2 underline cursor-pointer flex justify-center'> 
-             Alex J. Hardwell</Link>
+             Alex J. Hardwell</Link>:
+             
+             <Link 
+              onClick={()=>{setShown(false)}}
+             to={"/"} className=' fixed hover:text-text-2 underline cursor-pointer flex justify-center'> 
+            Lex</Link>}
+
+
+
           </div>
-          {width > breakpoint?   <div className=' gap-8 z-20 flex items-center transition-all ease-in-out duration-200'>
+          {width > breakpoint?   
+          <div className=' gap-8 z-20 flex items-center transition-all ease-in-out duration-200'>
             <Link className='hover:text-text-2 ' to={'/'}>Home</Link>
             <Link className='hover:text-text-2' to={'/about'}>About</Link>
             <Link className='hover:text-text-2' to={'/projects'}>Projects</Link>
@@ -49,13 +58,16 @@ const Nav = () => {
               <ion-icon size="large" name="menu-outline"></ion-icon>
               </span>: ""}
               {shown === true?
+              
                 <m.ul 
                 exit={{ opacity:0 }}
                 initial={{ opacity:0 }}
                 animate={{ opacity:1 }}
                 className=' absolute flex flex-col items-center top-1 right-1 p-1 transition-all ease-in-out duration-200 shadow'
                 >
+                  
                 <div >
+
                  
                   <ion-icon onClick={()=>{setShown(false)}}  name="close-outline"></ion-icon>
                  
