@@ -102,7 +102,9 @@ exit={{opacity:0.5}}
                     <m.div>
                           
                           <div className='flex flex-col items-center'>
-                          <a  className='text-text-4 flex items-center justify-center text-center underline cursor-pointer font-extrabold' href={data.link}>{data.site} {data.site?<p>.com</p> : ""}</a>
+                          <a  className='text-text-4 flex items-center justify-center text-center underline cursor-pointer font-extrabold'
+                          target="_blank" rel="noopener noreferrer"
+                          href={data.link}>{data.site} {data.site?<p>.com</p> : ""}</a>
                           <a  className='text-center font-medium'>Languages Used</a>
                           {data.logos.map((dat, index)=>{
                                             return <div className='flex items-center justify-center'>
@@ -114,9 +116,9 @@ exit={{opacity:0.5}}
                 })}
                           </div>
                           <div  >
-                            <a href={data.githubLink} className=' text-text-4 font-extrabold flex items-center justify-center text-center underline cursor-pointer'> {data.site} Code</a>
+                            <a target="_blank" rel="noopener noreferrer" href={data.githubLink} className=' text-text-4 font-extrabold flex items-center justify-center text-center underline cursor-pointer'> {data.site} Code</a>
                           <div className='flex items-center justify-center  '>
-                          <a href={data.githubLink}><img href={data.githubLink} className=' w-10 h-10 sm:w-10 bg-contain items-center justify-center cursor-pointer' src={data.github}></img></a>
+                          <a target="_blank" rel="noopener noreferrer" href={data.githubLink} ><img href={data.githubLink} className=' w-10 h-10 sm:w-10 bg-contain items-center justify-center cursor-pointer' src={data.github}></img></a>
                             </div>
                           </div>
                     </m.div>
