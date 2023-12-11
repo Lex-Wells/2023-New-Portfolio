@@ -37,6 +37,8 @@ const Projects= () => {
 
 
 
+
+
   const manageMouseEnter =(e, color, link)=>{
     gsap.to(e.target, {backgroundColor:color, marginLeft:"80px", duration:0.5,delay:0.2})
     gsap.to(box.current, {borderColor:color, duration:0.5,delay:0.2})
@@ -49,6 +51,11 @@ const Projects= () => {
   const showPicEnter=(e,pic)=>{
     return setProjectPic(pic); 
   }
+
+  const variants = {
+    hidden: { opacity: 0, x: '100%' },
+    visible: { opacity: 1, x: '0%' },
+  };
 
   // const handleClick = (index) => {
   //   // setIsOpen(!isOpen)
@@ -89,14 +96,14 @@ exit={{opacity:0.5}}
                 style={{borderRadius: "1rem", 
                 boxShadow: "0px 10px 30px rgba(0,0,0,0.5)"
                 }}
-                className='rounded-lg bg-white p-3 mt-2 '>
-                    <m.h2 layout="position" className='cursor-pointer text-center font-bold	' onClick={()=> handleClick(index)}>{data.name}</m.h2>
+                className=' rounded-lg bg-white p-1 mt-1 '>
+                    <m.h2 layout="position" className='cursor-pointer text-center font-extrabold	' onClick={()=> handleClick(index)}>{data.name}</m.h2>
                     {selectedObject === index && (
                     <m.div>
                           
                           <div className='flex flex-col items-center'>
-                          <a  className='cursor-pointer text-center font-extrabold text-background-6 text-l' href={data.link}>{data.site} <p> Link</p></a>
-                          <a  className='text-center font-semibold  underline'>Languages Used</a>
+                          <a  className='text-text-4 flex items-center justify-center text-center underline cursor-pointer font-extrabold' href={data.link}>{data.site} {data.site?<p>.com</p> : ""}</a>
+                          <a  className='text-center font-medium'>Languages Used</a>
                           {data.logos.map((dat, index)=>{
                                             return <div className='flex items-center justify-center'>
                                     <h1 className='text-center items-center justify-center text-sm'
@@ -107,9 +114,9 @@ exit={{opacity:0.5}}
                 })}
                           </div>
                           <div  >
-                            <a href={data.githubLink} className='flex items-center justify-center text-center underline cursor-pointer'> {data.site} Code</a>
+                            <a href={data.githubLink} className=' text-text-4 font-extrabold flex items-center justify-center text-center underline cursor-pointer'> {data.site} Code</a>
                           <div className='flex items-center justify-center  '>
-                          <a href={data.githubLink}><img href={data.githubLink} className='w-10 h-10 sm:w-10 bg-contain items-center justify-center cursor-pointer' src={data.github}></img></a>
+                          <a href={data.githubLink}><img href={data.githubLink} className=' w-10 h-10 sm:w-10 bg-contain items-center justify-center cursor-pointer' src={data.github}></img></a>
                             </div>
                           </div>
                     </m.div>
@@ -121,20 +128,18 @@ exit={{opacity:0.5}}
               {width < breakpoint?
                   <m.div></m.div>:
                   <m.div
-                  initial={{x: "-100%"}} 
-                  animate={{x: "0%"}} 
-                  transition={{duration:3, ease:"easeOut"}}
-                  >
-                {selectedObject !== null && (
-                  <Lottie
-                  initial={{x: "-100%"}} 
-                  animate={{x: "0%"}} 
-                  transition={{duration:3, ease:"easeOut"}}
-                  style={{width:400, height: 400 }}
-                    animationData={Data[selectedObject].lottie}
-                  ></Lottie>
-                )}
-              </m.div>   
+                  initial="hidden"
+                  animate={selectedObject !== null ? 'visible' : 'hidden'}
+                  variants={variants}
+                  transition={{ duration: 1.3, ease: "easeIn" }}
+                >
+                  {selectedObject !== null && (
+                    <Lottie
+                      style={{ width: 400, height: 400 }}
+                      animationData={Data[selectedObject].lottie}
+                    ></Lottie>
+                  )}
+                </m.div>
               }
         
     </m.div>

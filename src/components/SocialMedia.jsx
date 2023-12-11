@@ -10,7 +10,7 @@ const SocialMedia = () => {
 
 <div className="text-xs">
 <div className='flex items-center justify-center bg-background-2
-g-2 rounded-md p-2 m-2 cursor-pointer gap-1 lg:gap-6 hover:bg-background-6 shadow-md' 
+g-2 rounded-md p-2 m-2 cursor-pointer gap-1 lg:gap-6 shadow-md' 
 onClick={()=>{window.open("https://www.instagram.com/ajh_webdev/")}}
 >
         <img className='w-4 h-4 lg:w-8 lg:h-8 ' src={insta}></img>
@@ -18,7 +18,7 @@ onClick={()=>{window.open("https://www.instagram.com/ajh_webdev/")}}
 </div>
 <div
  className='flex items-center justify-center bg-background-2
-g-2 rounded-md p-2  m-2 cursor-pointer gap-1 lg:gap-6 hover:bg-background-6 shadow-md'
+g-2 rounded-md p-2  m-2 cursor-pointer gap-1 lg:gap-6 shadow-md'
 onClick={()=>{window.open("https://www.linkedin.com/in/alexander-hardwell/")}}
 >
         <img className=' w-5 h-5 lg:w-10 lg:h-10 ' src={link}></img>

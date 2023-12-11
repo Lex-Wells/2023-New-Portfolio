@@ -12,6 +12,8 @@ const Nav = () => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
   }, []);
 
+  
+
   let PageLinks = [
     {name: "Home", link: "/"},
     {name: "About", link: "/about"},
@@ -22,7 +24,7 @@ const Nav = () => {
   const [shown, setShown] = useState(false)
   return (
     <>
-   <nav className=' text-1xl lg:text-2xl text-background-1 p-2 font-thin z-20 absolute  w-full'>
+   <nav className='  text-1xl lg:text-2xl text-background-1 p-2 font-thin z-20 absolute  w-full'>
       <div className=''>
         <m.ul 
         exit={{ opacity:0 }}
@@ -31,15 +33,12 @@ const Nav = () => {
         className=' lg:gap-8 gap-4 z-20 flex items-center justify-between'>
           <div
           >
-            {width > breakpoint?   <Link 
-              onClick={()=>{setShown(false)}}
-             to={"/"} className=' resize-none hover:text-text-2 underline cursor-pointer flex justify-center'> 
-             Alex J. Hardwell</Link>:
-             
+          
+       
              <Link 
               onClick={()=>{setShown(false)}}
-             to={"/"} className=' fixed hover:text-text-2 underline cursor-pointer flex justify-center'> 
-            Lex</Link>}
+             to={"/"} className=' p-3 hover:text-text-2 underline cursor-pointer flex justify-center'> 
+            Alex J. Hardwell</Link>
 
 
 
@@ -51,10 +50,10 @@ const Nav = () => {
             <Link className='hover:text-text-2' to={'/projects'}>Projects</Link>
             <Link className='hover:text-text-2' to={'/contact'}>Contact</Link>
             </div> : 
-            <div className='cursor-pointer font-bold flex items-center'>
+            <div className=' cursor-pointer font-bold flex items-center'>
              {shown === false?
              <span onClick={()=>{setShown(true)}}
-              className='text-3xl mr-1 pt-2 resize-none '>
+              className=' text-3xl mr-1 pt-2 resize-none '>
               <ion-icon size="large" name="menu-outline"></ion-icon>
               </span>: ""}
               {shown === true?
@@ -63,7 +62,7 @@ const Nav = () => {
                 exit={{ opacity:0 }}
                 initial={{ opacity:0 }}
                 animate={{ opacity:1 }}
-                className=' absolute flex flex-col items-center top-1 right-1 p-1 transition-all ease-in-out duration-200 shadow'
+                className=' mt-3 absolute flex flex-col items-center top-1 right-1 p-1 transition-all ease-in-out duration-200 shadow'
                 >
                   
                 <div >
@@ -75,8 +74,8 @@ const Nav = () => {
                 {
                 PageLinks.map((link)=>(
     
-                  <li className='hover:text-text-2 relative ' key={link.name}>
-                    <Link onClick={()=>{setShown(false)}}  className='left-20 transition-all ease-in-out duration-200' to={link.link}>{link.name}</Link>
+                  <li className='hover:text-text-2 relative   ' key={link.name}>
+                    <Link onClick={()=>{setShown(false)}}  className=' left-20 transition-all ease-in-out duration-200' to={link.link}>{link.name}</Link>
                   </li>
        
                 )

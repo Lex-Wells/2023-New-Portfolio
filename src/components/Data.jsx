@@ -15,6 +15,7 @@ import CoffeeAn from "./LottieAni/CoffeeAni.json"
 import TodoList from "./LottieAni/Todo.json"
 import Sunny from "./LottieAni/Sunny.json"
 import PicLottie from "./LottieAni/PicLottie.json"
+import Man from "./LottieAni/Man.json"
 
 
 const Data =[
@@ -27,7 +28,6 @@ const Data =[
         lottie: Sunny, 
         githubLink: "https://github.com/Lex-Wells/Weather_Chat",
         link: "https://quiet-daffodil-25f6c7.netlify.app/",
-        // languages: ["HTML", "CSS", "React", "MongoDB", "ExpressJS", "NodeJS"],
         logos:  [ {
             name: "HTML", 
             logo: HtmlLogo,
@@ -115,6 +115,22 @@ const Data =[
         {
             name: "JavaScript", 
             logo: JsLogo
+        },],
+        github: GithubLogo
+    },{
+        name: "Porftolio", 
+        githubLink: "https://github.com/Lex-Wells/2023-New-Portfolio",
+        lottie: Man, 
+        logos:  [ {
+            name: "HTML", 
+            logo: HtmlLogo,
+        }, {
+            name: "CSS", 
+            logo: CssLogo,
+        },
+        {
+            name: "React", 
+            logo: ReactLogo
         },],
         github: GithubLogo
     },
