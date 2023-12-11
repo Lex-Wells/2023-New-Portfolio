@@ -118,7 +118,7 @@ const Data =[
         },],
         github: GithubLogo
     },{
-        name: "Porftolio", 
+        name: "Portfolio", 
         githubLink: "https://github.com/Lex-Wells/2023-New-Portfolio",
         lottie: Man, 
         logos:  [ {
