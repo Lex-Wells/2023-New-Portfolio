@@ -29,45 +29,41 @@ const ContactMe = () => {
     transition={{ duration: 0.75, ease: "easeOut" }}
     exit={{ opacity: 0.5 }}
   >
-    <div className='w-full'>
-    {width < breakpoint ?
-   <div className='flex items-center justify-center'>
-    <h1 className='text-center text-lg font-extrabold'>Contact Me</h1>
-   </div> 
-    
-    :
+    {width > breakpoint?<div className='w-full'>
+   
      <div>
         <Lottie animationData={Horizline} />
       </div>
-    }
-     
+    
   
       <div className='flex items-center'>
-      {width > breakpoint ? <div className='w-full'><SocialMedia /></div>: 
-    <></>
-      }
-        {width > breakpoint ?
+     <div className='w-full'><SocialMedia /></div>
         
         <div className='min-h-10 -min-w-6'>
             <Lottie animationData={straightline} />
             <Lottie animationData={straightline} />
             <Lottie animationData={straightline} />
-          </div> : ""
-          
-        }
+          </div> 
+        <div className='w-full'>
+          <ContactUs />
+        </div>
+      </div>
+       <Lottie animationData={Horizline} />
+     
+    </div>:  <div className='w-full'>
+   <div className='flex items-center justify-center'>
+    <h1 className='text-center text-lg font-extrabold'>Contact Me</h1>
+   </div> 
+      <div className='flex items-center'>
         <div className='w-full'>
           <ContactUs />
         </div>
       </div>
      
-      {width < breakpoint ? 
       <div className='flex items-center justify-center'> 
       <div className='w-1/2'><SocialMedia /></div>
       </div>
-      :
-       <Lottie animationData={Horizline} />
-      }
-    </div>
+    </div>}
     
   </m.div>
 
