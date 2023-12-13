@@ -50,7 +50,7 @@ result?
       <label>Message</label>
       <textarea className='border-0 rounded-none border-b-2 bg-transparent outline-none text-left px-0 w-full' name="message" required/>
       <input className=' flex items-center justify-center bg-background-2
-g-2 rounded-md p-2 m-2 cursor-pointer hover:bg-background-6 hover:text-text-3 shadow-md' type="submit" value="Send" />
+g-2 rounded-md p-2 m-2 cursor-pointer shadow-md' type="submit" value="Send" />
     </form>
   </div> 
   );

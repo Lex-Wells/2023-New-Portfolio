@@ -86,7 +86,10 @@ className='bg-background-4 w-full h-full top-0 left-0 absolute lg:px-48 px-16 '
 exit={{opacity:0.5}}
 > 
 
-    <m.div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <m.div 
+     style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}
+     className='mt-5'
+     >
 
             <m.div >
               {Data.map((data, index)=>{

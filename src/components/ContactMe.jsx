@@ -30,25 +30,45 @@ const ContactMe = () => {
     exit={{ opacity: 0.5 }}
   >
     <div className='w-full'>
-      <div>
+    {width < breakpoint ?
+   <div className='flex items-center justify-center'>
+    <h1 className='text-center text-lg font-extrabold'>Contact Me</h1>
+   </div> 
+    
+    :
+     <div>
         <Lottie animationData={Horizline} />
       </div>
+    }
+     
   
       <div className='flex items-center'>
-        <div className='w-full'><SocialMedia /></div>
-        {width < breakpoint ? "" :
-          <div className='min-h-10 -min-w-6'>
+      {width > breakpoint ? <div className='w-full'><SocialMedia /></div>: 
+    <></>
+      }
+        {width > breakpoint ?
+        
+        <div className='min-h-10 -min-w-6'>
             <Lottie animationData={straightline} />
             <Lottie animationData={straightline} />
             <Lottie animationData={straightline} />
-          </div>
+          </div> : ""
+          
         }
         <div className='w-full'>
           <ContactUs />
         </div>
       </div>
-      <Lottie animationData={Horizline} />
+     
+      {width < breakpoint ? 
+      <div className='flex items-center justify-center'> 
+      <div className='w-1/2'><SocialMedia /></div>
+      </div>
+      :
+       <Lottie animationData={Horizline} />
+      }
     </div>
+    
   </m.div>
 
  

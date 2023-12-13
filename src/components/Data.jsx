@@ -16,6 +16,7 @@ import TodoList from "./LottieAni/Todo.json"
 import Sunny from "./LottieAni/Sunny.json"
 import PicLottie from "./LottieAni/PicLottie.json"
 import Man from "./LottieAni/Man.json"
+import Tailwind from "../pics/tailwind.png"
 
 
 const Data =[
@@ -49,7 +50,11 @@ const Data =[
         {
             name: "Node JS", 
             logo: NjsLogo
-        },],
+        },
+        {
+            name: "Tailwind CSS", 
+            logo: Tailwind
+        }],
         github: GithubLogo
     }, 
     {
@@ -131,7 +136,11 @@ const Data =[
         {
             name: "React", 
             logo: ReactLogo
-        },],
+        },
+        {
+            name: "Tailwind CSS", 
+            logo: Tailwind
+        }],
         github: GithubLogo
     },
 ]

@@ -33,9 +33,16 @@ const About = () => {
  <div
  className=' mt-20 lg:w-2/3 h-1/2 p-4 flex flex-justify items-center md:items-center lg:items-center'
  >    
- <div className='shadow text-xs -z-40 gap-2 sm:text-base font-thin flex items-center w-full sm:w-full sm:h-1/2 bottom-0 lg:top-0 p-3 '>
-      <p className=' g-2 rounded-md p-2 m-2 text-center sm:leading-6 leading-5 '>My name is <b className='font-bold text-center '>Alexander J. Hardwell</b>. I began my journey by learning HTML,CSS, JavaScript, and Python. I have also completed a MERN Stack(MongoDB, Express, React, and Node JS) project and I hope to master React Native soon.  I hope to share my passion with you.</p>   
-  </div>
+<div className='bg-background-3 shadow text-xs gap-2 sm:text-base font-thin flex items-center w-full sm:w-full sm:h-3/4 bottom-0 lg:top-0 p-3'>
+{ width > breakpoint? <p className='g-2 rounded-md p-2 m-2 text-center sm:leading-6 leading-5'>
+    My name is <b className='font-bold text-center'>Alexander J. Hardwell</b>. My passion for web development began with a solid foundation in HTML, CSS, JavaScript, and Python. This foundation has allowed me to explore more complex technologies, culminating in the completion of a MERN Stack project (MongoDB, Express, React, and Node.js). I am eager to share my enthusiasm and knowledge, contributing to collaborative projects and fostering a vibrant working environment.
+  </p>:
+  <p className='g-2 rounded-md p-2 m-2 text-center sm:leading-6 leading-5'>
+  My name is <b className='font-bold text-center'>Alexander J. Hardwell</b>. My passion for web development began with a solid foundation in HTML, CSS, JavaScript, and Python. This foundation has allowed me to explore more complex technologies, such as the MERN Stack . I am eager to share my enthusiasm and knowledge, contributing to collaborative projects and fostering a vibrant working environment.
+</p>
+}
+</div>
+
 </div>
 { width > imageBreapPoint? 
 <div className=' lg:w-1/2 md:w-2/3  bottom-0 right-0 absolute'>
