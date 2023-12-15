@@ -1,10 +1,7 @@
 import React ,{useEffect, useState}from 'react'
 import {motion as m} from 'framer-motion'
-// import Lottie from "lottie-react"
-// import Circles from "./LottieAni/Circles.json"
 import headshot from "../pics/headshot-transparent.png"
 import Lottie from "lottie-react"
-import Man from "./LottieAni/ManTyping.json"
 import ManTyping from "./LottieAni/ManTyping.json"
 import Fingerprint from "./LottieAni/Fingerprint.json"
 

@@ -8,7 +8,7 @@ const ContactUs = () => {
  
   const form = useRef();
   const [result,setResult] = useState("")
-    console.log(result.status);
+   
 
 
   const sendEmail = (e) => {
@@ -16,11 +16,9 @@ const ContactUs = () => {
 
     emailjs.sendForm('service_d7o1bgr', "template_lz885er", form.current, '-3ZvqhWleFDmcp4BZ')
       .then((result) => {
-          console.log(result.text);
           let res = result
           return setResult(res)
       }, (error) => {
-          console.log(error.text);
           return error
       });
   };

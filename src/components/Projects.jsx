@@ -2,75 +2,32 @@ import React, { useState,useRef, useEffect} from 'react'
 import {motion as m} from 'framer-motion'
 import {useAnimation } from 'framer-motion'
 import Lottie from "lottie-react"
-import Man from "./LottieAni/ManTyping.json"
-import { gsap } from 'gsap'
 import  Data  from './Data'
-import { Carousel, IconButton } from "@material-tailwind/react";
-import Languages from './Languages'
-import { TERipple } from 'tw-elements-react';
-import GithubLogo from "../pics/github-logo.png"
-import Particles1 from "../ParticlesComp/Particles1"
 
 
 
 const Projects= () => {
-  const [isOpen,setIsOpen] = useState(false)
   const [width, setWidth] = useState(window.innerWidth);
-  const breakpoint = 1000;
- const [projectPic, setProjectPic] = useState("")
- const [projectPicLink, setProjectPicLink] = useState("")
- const [linkIndex, setLinkIndex] = useState("")
- const box = useRef()
+  const breakpoint = 1000
  
 
- const controls = useAnimation();
 
- const handleDivClick = async () => {
-   await controls.start({ x: '-50%' });
-
-   await controls.start({ opacity: 1 });
- };
 
  useEffect(() => {
   window.addEventListener("resize", () => setWidth(window.innerWidth));
 }, []);
 
 
-
-
-
-  const manageMouseEnter =(e, color, link)=>{
-    gsap.to(e.target, {backgroundColor:color, marginLeft:"80px", duration:0.5,delay:0.2})
-    gsap.to(box.current, {borderColor:color, duration:0.5,delay:0.2})
-    setProjectPicLink(link)
-  }
-  const manageMouseLeave =(e)=>{
-    gsap.to(e.target, {backgroundColor:"#AB9F9D", marginLeft:"0px",  duration:0.5,delay:0.2})
-    gsap.to(box.current, {duration:0.5,delay:0.2})
-  }
-  const showPicEnter=(e,pic)=>{
-    return setProjectPic(pic); 
-  }
-
   const variants = {
     hidden: { opacity: 0, x: '100%' },
     visible: { opacity: 1, x: '0%' },
   };
 
-  // const handleClick = (index) => {
-  //   // setIsOpen(!isOpen)
-  //   //  setSelectedObject(index);
-  //   //  console.log(isOpen);
-  //   console.log(index);
-   
-  // };
   const [selectedObject, setSelectedObject] = useState(null);
 
   const handleClick = (index) => {
     setSelectedObject((prevSelected) => (prevSelected === index ? null : index))
     setLinkIndex(index)
-    console.log(`MMMMSSS ${selectedObject}`);
-    console.log(`Indesssxx ${linkIndex}`);
   };
 
 

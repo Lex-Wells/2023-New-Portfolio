@@ -22,8 +22,6 @@ const Hero = () => {
   },[])
  ;
 
-console.log(showHand);
-
   const [width, setWidth] = useState(window.innerWidth);
   const breakpoint = 1000;
 

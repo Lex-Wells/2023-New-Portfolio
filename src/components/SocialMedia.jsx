@@ -1,7 +1,6 @@
 import React from 'react'
 import insta from "../pics/insta.png"
 import link from "../pics/link.png"
-import {motion as m} from 'framer-motion'
 
 
 
